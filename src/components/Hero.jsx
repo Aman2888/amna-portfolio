@@ -1,35 +1,35 @@
 import { useEffect, useRef } from 'react';
 import ThreeCanvas from './ThreeCanvas';
 
-function Stars() {
-  const stars = Array.from({ length: 60 }, (_, i) => ({
-    id: i,
-    top: Math.random() * 100,
-    left: Math.random() * 100,
-    size: Math.random() * 3 + 1,
-    duration: Math.random() * 4 + 2,
-    delay: Math.random() * 4,
-  }));
+// function Stars() {
+//   const stars = Array.from({ length: 60 }, (_, i) => ({
+//     id: i,
+//     top: Math.random() * 100,
+//     left: Math.random() * 100,
+//     size: Math.random() * 3 + 1,
+//     duration: Math.random() * 4 + 2,
+//     delay: Math.random() * 4,
+//   }));
 
-  return (
-    <div className="stars" aria-hidden="true">
-      {stars.map(s => (
-        <div
-          key={s.id}
-          className="star"
-          style={{
-            top: `${s.top}%`,
-            left: `${s.left}%`,
-            width: s.size,
-            height: s.size,
-            '--duration': `${s.duration}s`,
-            animationDelay: `${s.delay}s`,
-          }}
-        />
-      ))}
-    </div>
-  );
-}
+//   return (
+//     <div className="stars" aria-hidden="true">
+//       {stars.map(s => (
+//         <div
+//           key={s.id}
+//           className="star"
+//           style={{
+//             top: `${s.top}%`,
+//             left: `${s.left}%`,
+//             width: s.size,
+//             height: s.size,
+//             '--duration': `${s.duration}s`,
+//             animationDelay: `${s.delay}s`,
+//           }}
+//         />
+//       ))}
+//     </div>
+//   );
+// }
 
 export default function Hero() {
   const textRef = useRef(null);
@@ -52,7 +52,7 @@ export default function Hero() {
       id="hero"
       className="relative min-h-screen flex items-center overflow-hidden noise-bg"
     >
-      <Stars />
+      {/* <Stars /> */}
 
       {/* Purple mesh blobs */}
       <div
