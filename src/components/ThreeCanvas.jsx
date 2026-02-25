@@ -22,7 +22,7 @@ export default function ThreeCanvas() {
 
       // Scene
       const scene = new THREE.Scene();
-      const camera = new THREE.PerspectiveCamera(60, width / height, 0.1, 100);
+      const camera = new THREE.PerspectiveCamera(60, 1, 0.1, 100);
       camera.position.z = 5;
 
       const renderer = new THREE.WebGLRenderer({ antialias: true, alpha: true });
@@ -228,11 +228,7 @@ export default function ThreeCanvas() {
   return (
     <div
       ref={mountRef}
-      style={{
-        width: 'auto',
-        minHeight: "600px",
-        // background: "radial-gradient(ellipse at center, #0d0030 0%, #000010 100%)",
-      }}
+      className="w-full h-full absolute inset-0"
     />
   );
 }
